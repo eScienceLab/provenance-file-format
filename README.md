@@ -22,7 +22,9 @@ The initial use-case is capture of provenance on HPC systems (SLURM), for adding
 
 Setup (requires [uv](https://docs.astral.sh/uv/)):
 
-    uv sync --group dev
+```bash
+uv sync --group dev
+```
 
 ## Regenerating the compiled schema
 
