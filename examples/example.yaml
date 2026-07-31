@@ -8,10 +8,6 @@ project:
   description: >
     Fictional research programme in psychoceramics, the supposed study of
     cracked pots. Professor Carberry is said to still teach at Brown University.
-  PI:
-    id: jcarberry
-    full_name: Josiah Stinkney Carberry
-    orcid: https://orcid.org/0000-0002-1825-0097
   start_date: "1929-04-01"
 system:
   hardware:
