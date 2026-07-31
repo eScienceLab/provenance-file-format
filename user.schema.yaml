@@ -1,0 +1,10 @@
+id: userinfo
+name: user.schema
+classes:
+  User:
+    attributes:
+      id:
+      full_name:
+      orcid:
+        range: uriorcurie
+      email:

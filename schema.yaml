@@ -1,0 +1,13 @@
+id: provenance-file-format
+name: provenance-file-format
+prefixes:
+  linkml: https://w3id.org/linkml/
+default_range: string
+default_prefix: pff
+
+imports:
+  - linkml:types
+  - user.schema
+  - project.schema
+  - system.schema
+

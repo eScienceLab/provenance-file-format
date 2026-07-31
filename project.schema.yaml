@@ -1,0 +1,14 @@
+id: projectinfo
+name: project.schema
+classes:
+  Project:
+    attributes:
+      id:
+      title:
+      description:
+      PI:
+        range: User
+      start_date:
+        range: date
+      end_date:
+        range: date

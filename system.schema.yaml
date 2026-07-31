@@ -1,0 +1,22 @@
+id: systeminfo
+name: system.schema
+classes:
+  CPU:
+    attributes:
+      vendor:
+      name:
+      cores:
+        range: integer
+      threads:
+        range: integer
+  OS:
+    attributes:
+      name:
+      version:
+  System:
+    attributes:
+      hardware:
+        range: CPU
+      software:
+        range: OS
+      hostname:
