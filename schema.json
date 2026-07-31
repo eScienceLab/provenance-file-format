@@ -94,16 +94,6 @@
             "additionalProperties": false,
             "description": "",
             "properties": {
-                "PI": {
-                    "anyOf": [
-                        {
-                            "$ref": "#/$defs/User"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ]
-                },
                 "description": {
                     "type": [
                         "string",
