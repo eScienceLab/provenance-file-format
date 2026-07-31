@@ -11,3 +11,14 @@ imports:
   - project.schema
   - system.schema
 
+classes:
+  PFF:
+    tree_root: true
+    attributes:
+      user:
+        range: User
+      project:
+        range: Project
+      system:
+        range: System
+
