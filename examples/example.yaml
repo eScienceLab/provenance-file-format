@@ -1,0 +1,25 @@
+user:
+  id: jcarberry
+  full_name: Josiah Stinkney Carberry
+  orcid: https://orcid.org/0000-0002-1825-0097
+project:
+  id: psychoceramics
+  title: "Psychoceramics: The Study of Cracked Pots"
+  description: >
+    Fictional research programme in psychoceramics, the supposed study of
+    cracked pots. Professor Carberry is said to still teach at Brown University.
+  PI:
+    id: jcarberry
+    full_name: Josiah Stinkney Carberry
+    orcid: https://orcid.org/0000-0002-1825-0097
+  start_date: "1929-04-01"
+system:
+  hardware:
+    vendor: Intel
+    name: Xeon
+    cores: 16
+    threads: 32
+  software:
+    name: Ubuntu
+    version: "24.04"
+  hostname: carberry-lab-01
