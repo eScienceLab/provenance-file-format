@@ -1,0 +1,26 @@
+name: Ensure LinkML schema is compiled
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: '3.12'
+      - name: Install linkml
+        run: uv sync --group dev
+      - name: Compile schemas and check committed output
+        run: |
+          set -euo pipefail
+          uv run linkml generate json-schema schema.yaml > /tmp/schema.json
+          diff -u schema.json /tmp/schema.json
+      - name: Validate example data
+        run: |
+          set -euo pipefail
+          uv run linkml validate -s schema.yaml -C PFF examples/example.yaml
