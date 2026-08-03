@@ -13,4 +13,33 @@ The initial use-case is capture of provenance on HPC systems (SLURM), for adding
 4. A creation tool will be provided for these files. This will guide users in populating the appropriate files, and will validate the files against the LINK-ML schema.
 5. SLURM plugin will scan PFFPATH locations as job runs. *.pff files found will be validated against the schema, then metadata ingested.
 
+## Schemas
+
+- `schema.yaml` — entry schema (imports the fragments below)
+- `user.schema.yaml` / `project.schema.yaml` / `system.schema.yaml` — definitions
+
+## Development
+
+Setup (requires [uv](https://docs.astral.sh/uv/)):
+
+```bash
+uv sync --group dev
+```
+
+## Regenerating the compiled schema
+
+`schema.json` is the compiled output of `schema.yaml`. After changing any schema, regenerate it and commit:
+
+```bash
+uv run linkml generate json-schema schema.yaml > schema.json
+```
+
+CI fails if `schema.json` is out of date.
+
+## Validating the example
+
+```bash
+uv run linkml validate -s schema.yaml -C PFF examples/example.yaml
+```
+
 

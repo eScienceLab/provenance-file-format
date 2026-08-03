@@ -6,8 +6,6 @@ classes:
       id:
       title:
       description:
-      PI:
-        range: User
       start_date:
         range: date
       end_date:

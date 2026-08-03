@@ -1,0 +1,241 @@
+{
+    "$defs": {
+        "CPU": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "cores": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "threads": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "vendor": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "title": "CPU",
+            "type": "object"
+        },
+        "OS": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "version": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "title": "OS",
+            "type": "object"
+        },
+        "PFF": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "project": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Project"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "system": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/System"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "user": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/User"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                }
+            },
+            "title": "PFF",
+            "type": "object"
+        },
+        "Project": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "end_date": {
+                    "format": "date",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "start_date": {
+                    "format": "date",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "title": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "title": "Project",
+            "type": "object"
+        },
+        "System": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "hardware": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/CPU"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "hostname": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "software": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/OS"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                }
+            },
+            "title": "System",
+            "type": "object"
+        },
+        "User": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "email": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "full_name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "orcid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "title": "User",
+            "type": "object"
+        }
+    },
+    "$id": "provenance-file-format",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "description": "",
+    "metamodel_version": "1.11.0",
+    "properties": {
+        "project": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/Project"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "system": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/System"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "user": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/User"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        }
+    },
+    "title": "provenance-file-format",
+    "type": "object",
+    "version": null
+}
+
